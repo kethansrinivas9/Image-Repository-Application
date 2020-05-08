@@ -1,0 +1,23 @@
+{
+  "name": "image_repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "angular.min.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multipart": "^0.1.5",
+    "mysql": "^2.18.1",
+    "ng-file-upload": "^12.2.13",
+    "nodemon": "^2.0.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Kethan Dasari",
+  "license": "ISC"
+}

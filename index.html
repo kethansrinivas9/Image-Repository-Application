@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="ng-file-upload.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="image_repository_app">
+    <br>
+    <div align="center" ng-controller="mainController">
+        <input type="text" name="image_description" value="" style="width: 340px;">
+        <button type="button" class="btn btn-primary">Search</button>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <button ngf-select="uploadFiles($files)" multiple ngf-max-size="1MB">
+            Select Files</button>
+
+        <br><br>
+        Files:
+        <ul>
+          <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
+            <span class="progress" ng-show="f.progress >= 0">
+              <div style="width:{{f.progress}}%"
+                  ng-bind="f.progress + '%'"></div>
+            </span>
+            <img ngf-src="f" class="thumb">
+          </li>
+        </ul>
+        {{errorMsg}}
+    </div>
+  </body>
+</html>
