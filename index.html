@@ -17,17 +17,17 @@
             Select Files</button>
 
         <br><br>
-        Files:
         <ul>
-          <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
-            <span class="progress" ng-show="f.progress >= 0">
-              <div style="width:{{f.progress}}%"
-                  ng-bind="f.progress + '%'"></div>
-            </span>
-            <img ngf-src="f" class="thumb">
-          </li>
+        			<div class="image container" ng-repeat="file in files">
+        				<h4>{{file.name}}</h4>
+        				<div>
+                  <img ngf-src="file" class="thumb" height="300" width="500">
+        				</div>
+        			</div>
         </ul>
-        {{errorMsg}}
+        <br>
+        <h1>Blob image demo</h1>
+        <img ng-src="{{dataURL}}">
     </div>
   </body>
 </html>
