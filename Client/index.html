@@ -26,8 +26,16 @@
         			</div>
         </ul>
         <br>
-        <h1>Blob image demo</h1>
-        <img ng-src="{{dataURL}}">
+
+        <!-- Code to display the images from database -->
+        <h1>Uploaded images</h1>
+        <div ng-repeat="image in images track by $index">
+            <!-- https://stackoverflow.com/a/34112174/4452196 -->
+            <img ng-src="data:image/png;base64,{{image}}" width="300" height="200">
+            <br><br><br><br><br>
+        </div>
+
+        <button type="button" ng-click="getAllImages()">Get Images</button>
     </div>
   </body>
 </html>

@@ -41,7 +41,7 @@ module.exports = {
             name: file.name,
             image: data
         };
-
+        // insert the images into the datbase in blob format
         con.query('INSERT INTO image_repository.image_db SET ?', blob_details, function(err,
             result) {
             console.log(result);
@@ -49,11 +49,12 @@ module.exports = {
       });
   },
 
-  tempInsert: function(){
+  getAllImages: function(callback){
     var sql = "SELECT image from image_repository.image_db";
     con.query(sql, function(err, result){
       if (err) throw err;
-      console.log(result);
+      // send the result to the invoker via callback
+      callback(result);
     });
   }
 }

@@ -14,7 +14,6 @@ app.use(cors());
 queries.connect();
 queries.createImageRepository();
 queries.createImageTable();
-queries.tempInsert();
 
 app.post('/imageUpload', multipartMiddleware, (req,res) => {
     console.log("request came here...");
@@ -27,6 +26,16 @@ app.post('/imageUpload', multipartMiddleware, (req,res) => {
     }
 
     res.sendStatus(200);
+});
+
+app.get('/getAllImages', (req,res) => {
+    queries.getAllImages(function(result){
+      var base64Images = []
+      for(i = 0;i<result.length; i++){
+        base64Images.push(new Buffer(result[i]["image"]).toString('base64'));
+      }
+      res.send(base64Images);
+    })
 });
 
 app.listen('3002', () => {
