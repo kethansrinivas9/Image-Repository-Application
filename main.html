@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="image_repository_app">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="ng-file-upload.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Client/CSS/mystyles.css">
+  </head>
+
+  <body ng-controller="mainController">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Image Repository</a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li ng-class="{ active: isActive('/')}">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li ng-class="{ active: isActive('/upload')}">
+            <a class="nav-link" href="#!upload">Upload</a>
+          </li>
+          <li ng-class="{ active: isActive('/searchimages')}">
+            <a class="nav-link" href="#!searchimages">Search Images</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="main">
+      <div ng-view></div>
+    </div>
+  </body>
+</html>

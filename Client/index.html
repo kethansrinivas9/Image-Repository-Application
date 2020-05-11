@@ -1,41 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="angular.js"></script>
-    <script src="ng-file-upload.min.js"></script>
-    <script src="app.js"></script>
-  </head>
-  <body ng-app="image_repository_app">
-    <br>
-    <div align="center" ng-controller="mainController">
-        <input type="text" name="image_description" value="" style="width: 340px;">
-        <button type="button" class="btn btn-primary">Search</button>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <br>
+  <div>
+      <!-- Code to display the images from database -->
+      <h2 style="text-align: center;">Uploaded images</h1>
+      <br>
 
-        <button ngf-select="uploadFiles($files)" multiple ngf-max-size="1MB">
-            Select Files</button>
-
-        <br><br>
-        <ul>
-        			<div class="image container" ng-repeat="file in files">
-        				<h4>{{file.name}}</h4>
-        				<div>
-                  <img ngf-src="file" class="thumb" height="300" width="500">
-        				</div>
-        			</div>
-        </ul>
-        <br>
-
-        <!-- Code to display the images from database -->
-        <h1>Uploaded images</h1>
-        <div ng-repeat="image in images track by $index">
-            <!-- https://stackoverflow.com/a/34112174/4452196 -->
-            <img ng-src="data:image/png;base64,{{image}}" width="300" height="200">
-            <br><br><br><br><br>
-        </div>
-
-        <button type="button" ng-click="getAllImages()">Get Images</button>
-    </div>
-  </body>
-</html>
+      <div class="container" ng-repeat="image in images track by $index">
+          <!-- https://stackoverflow.com/a/34112174/4452196 -->
+          <img class="img" ng-src="data:image/png;base64,{{image}}">
+      </div>
+  </div>

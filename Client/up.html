@@ -1,0 +1,16 @@
+<div align="center">
+    <br>
+    <button ngf-select="uploadFiles($files)" multiple>
+        Upload Files</button>
+
+    <br><br>
+    <ul>
+    			<div class="image container" ng-repeat="file in files">
+    				<h4>{{file.name}}</h4>
+    				<div>
+              <img ngf-src="file" class="thumb" height="300" width="500">
+    				</div>
+    			</div>
+    </ul>
+    <br>
+</div>

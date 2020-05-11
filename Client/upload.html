@@ -1,0 +1,27 @@
+DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="ng-file-upload.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="image_repository_app">
+    <br>
+    <div align="center" ng-controller="mainController">
+        <button ngf-select="uploadFiles($files)" multiple>
+            Select Files</button>
+
+        <br><br>
+        <ul>
+        			<div class="image container" ng-repeat="file in files">
+        				<h4>{{file.name}}</h4>
+        				<div>
+                  <img ngf-src="file" class="thumb" height="300" width="500">
+        				</div>
+        			</div>
+        </ul>
+        <br>
+    </div>
+  </body>
+</html>

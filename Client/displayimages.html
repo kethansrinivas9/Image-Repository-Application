@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="ng-file-upload.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="image_repository_app">
+    <br>
+    <div align="center" ng-controller="mainController">
+        <!-- Code to display the images from database -->
+        <h1>Images stored in the database</h1>
+        <br>
+        <button type="button" ng-click="getAllImages()">Get Images</button>
+        <div ng-repeat="image in images track by $index">
+            <!-- https://stackoverflow.com/a/34112174/4452196 -->
+            <img ng-src="data:image/png;base64,{{image}}" width="300" height="200">
+            <br><br><br><br><br>
+        </div>
+    </div>
+  </body>
+</html>
