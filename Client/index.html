@@ -4,8 +4,10 @@
       <h2 style="text-align: center;">Uploaded images</h1>
       <br>
 
-      <div class="container" ng-repeat="image in images track by $index">
+      <div class="container" ng-repeat="image in images | limitTo:maxItemsToDisplay track by $index ">
           <!-- https://stackoverflow.com/a/34112174/4452196 -->
           <img class="img" ng-src="data:image/png;base64,{{image}}">
       </div>
+      <br><br>
   </div>
+  <div infinite-scroll='loadMore()' infinite-scroll-distance='0'>
