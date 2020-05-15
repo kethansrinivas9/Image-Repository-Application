@@ -1,10 +1,13 @@
 var mysql = require('mysql');
 var fs = require('fs');
 
+// MySQL 8 server has connection issues
+// fixed with https://github.com/mysqljs/mysql/issues/2046
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
+  host: "192.168.0.56",
+  user: "rootuser",
   password: "kethan",
+  port: 3306,
   multipleStatements: true,
   charset : 'utf8'
 });

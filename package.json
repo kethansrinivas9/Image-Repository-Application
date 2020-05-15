@@ -1,7 +1,7 @@
 {
   "name": "image_repository",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a Single Page Application that is created using MySQL, ExpressJS, AngularJS and NodeJS. This application is developed as part of [Shopify Internship challenge](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit#).",
   "main": "angular.min.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -19,5 +19,14 @@
     "start": "nodemon server.js"
   },
   "author": "Kethan Dasari",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kethansrinivas9/Image-Repository-Application.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kethansrinivas9/Image-Repository-Application/issues"
+  },
+  "homepage": "https://github.com/kethansrinivas9/Image-Repository-Application#readme"
 }
