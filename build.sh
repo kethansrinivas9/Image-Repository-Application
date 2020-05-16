@@ -52,6 +52,6 @@ rm -r "$BUILD_DIR/"
 echo -e "${GREEN}Running the Server container...${NO_COLOR}"
 docker run -d --name server -p 3002:3002 kethansrinivas9/image_repository_server
 
-# echo -e "${GREEN}Pushing the images to Docker Hub...${NO_COLOR}"
-# docker push kethansrinivas9/image_repository_client:latest
-# docker push kethansrinivas9/image_repository_server:latest
+echo -e "${GREEN}Pushing the images to Docker Hub...${NO_COLOR}"
+docker push kethansrinivas9/image_repository_client:latest
+docker push kethansrinivas9/image_repository_server:latest

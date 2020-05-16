@@ -33,11 +33,13 @@
       $scope.myHeader="my custom text";
       $scope.ShowLoadMore = true;
       $scope.maxItemsToDisplay = 4;
+      $scope.showSpinner = true;
 
       $scope.getAllImages = function () {
         $http.get('http://localhost:3002/getAllImages/').then(function(response) {
             console.log("Getting all images from database...")
             $scope.images = response["data"];
+            $scope.showSpinner = false;
             $scope.maxRecordsLength = $scope.images.length;
         });
       }
