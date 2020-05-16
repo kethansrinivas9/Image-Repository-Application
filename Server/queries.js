@@ -4,10 +4,10 @@ var fs = require('fs');
 // MySQL 8 server has connection issues
 // fixed with https://github.com/mysqljs/mysql/issues/2046
 var con = mysql.createConnection({
-  host: "192.168.0.56",
-  user: "rootuser",
-  password: "kethan",
-  port: 3306,
+  host: process.env.DB_HOST_IP,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  port: process.env.DB_PORT,
   multipleStatements: true,
   charset : 'utf8'
 });

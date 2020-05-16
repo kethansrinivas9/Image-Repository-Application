@@ -9,6 +9,11 @@ RUN npm install
 
 WORKDIR ./Server
 
+ENV DB_HOST_IP
+ENV DB_USER
+ENV DB_PASS
+ENV DB_PORT
+
 EXPOSE 3002
 
 CMD ["node", "server.js"]
