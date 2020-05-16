@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  Client:
+    image: kethansrinivas9/image_repository_client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - Server
+  Server:
+    image: kethansrinivas9/image_repository_server
+    environment:
+      - DB_HOST_IP=192.168.0.56
+      - DB_USER=rootuser
+      - DB_PASS=kethan
+      - DB_PORT=3306
+    ports:
+      - "3002:3002"
