@@ -14,17 +14,22 @@ Yet to complete:
 2. Display images based on their visibility as public/private
 3. Delete the images
 
+# Prerequisites to run the Application
+1. Install MySQL database on your machine with username as `root` and password as `kethan`
+2. Install Docker on your machine with virtual Box
+3. Add port forwarding rules in the virtual Box by following the below steps
+   Virtual Box -> Settings -> Network -> Adapter 1 -> Port Forwarding -> Add port forwarding rules for 3000 and 3002 ports
+
 # Instructions to Install and Deploy the Application
-1. Download Docker on your machine
-2. Clone the repository into your machine
-3. Pull the latest docker images of Client and Server into your machine with the below commands
+1. Clone the repository into your machine
+2. Pull the latest docker images of Client and Server into your machine with the below commands
 
    a) docker pull kethansrinivas9/image_repository_client:latest
    
    b) docker pull kethansrinivas9/image_repository_server
-4. Once the images are pulled into your machine run the docker containers using below commands
+3. Once the images are pulled into your machine run the docker containers using below commands
 
    a) docker run -d --name client -p 3000:3000 kethansrinivas9/image_repository_client
    
    b) docker run -d --name server -p 3002:3002 kethansrinivas9/image_repository_server
-5. You should be able to access the application by entering the url http://localhost:3000/main.html in your browser
+4. You should be able to access the application by entering the url http://localhost:3000/main.html in your browser
