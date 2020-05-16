@@ -17,7 +17,8 @@ Yet to complete:
 # Prerequisites to run the Application
 1. Install MySQL database on your machine with username as `root` and password as `kethan`
 2. Install Docker on your machine with virtual Box
-3. Add port forwarding rules in the virtual Box by following the below steps
+3. Add port forwarding rules in the virtual Box by following the below steps:
+
    Virtual Box -> Settings -> Network -> Adapter 1 -> Port Forwarding -> Add port forwarding rules for 3000 and 3002 ports
 
 # Instructions to Install and Deploy the Application
