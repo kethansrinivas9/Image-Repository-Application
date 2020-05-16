@@ -4,8 +4,14 @@
       <h2 style="text-align: center;">Uploaded images</h1>
       <br>
 
+      <!-- Spinner to display when the images are still loading -->
+      <div class="spinner-border" role="status" ng-show="showSpinner" id='centerAligned'>
+        <span class="sr-only">Loading...</span>
+      </div>
+
+      <!-- Load all images from database and display -->
       <div class="container" ng-repeat="image in images | limitTo:maxItemsToDisplay track by $index ">
-          <!-- https://stackoverflow.com/a/34112174/4452196 -->
+          <!-- Fixed this issue https://stackoverflow.com/a/34112174/4452196 -->
           <img class="img" ng-src="data:image/png;base64,{{image}}">
       </div>
       <br><br>
