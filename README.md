@@ -18,9 +18,13 @@ Yet to complete:
 1. Download Docker on your machine
 2. Clone the repository into your machine
 3. Pull the latest docker images of Client and Server into your machine with the below commands
+
    a) docker pull kethansrinivas9/image_repository_client:latest
+   
    b) docker pull kethansrinivas9/image_repository_server
 4. Once the images are pulled into your machine run the docker containers using below commands
+
    a) docker run -d --name client -p 3000:3000 kethansrinivas9/image_repository_client
+   
    b) docker run -d --name server -p 3002:3002 kethansrinivas9/image_repository_server
 5. You should be able to access the application by entering the url http://localhost:3000/main.html in your browser
