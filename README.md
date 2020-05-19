@@ -14,7 +14,7 @@ This is a Single Page Application that is created using MySQL, ExpressJS, Angula
 2. Display images based on their visibility as public/private
 3. Delete the images
 
-# Instructions to run the Application using Docker Compose
+# Instructions to run the Application (Docker Compose)
 1. Install MySQL database on your machine
 2. Add mysql database details in docker-compose.yml file below the environment
 2. Install Docker on your machine with virtual Box
