@@ -10,9 +10,9 @@ This is a Single Page Application that is created using MySQL, ExpressJS, Angula
 
 
 #### Yet to complete:
-1. Add Authentication for the application
-2. Display images based on their visibility as public/private
-3. Delete the images
+1. Authentication feature for the application
+2. Display images based on their visibility (can be either public/private)
+3. Image deletion feature
 
 # Instructions to run the Application using Docker
 1. Install MySQL database on your machine
