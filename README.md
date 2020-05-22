@@ -5,7 +5,7 @@ This is a Single Page Application that is created using MySQL, ExpressJS, Angula
 #### The application has the following features:
 1. Upload one/bulk images
 2. Display the uploaded images
-3. Load images on scroll to reduce the latency in displaying them
+3. Lazy Load the images when the scroll bar reaches to the bottom of the page to reduce the latency in displaying them
 4. Dockerized the application by splitting it into two containers, one for the frontend and the other for backend
 
 
