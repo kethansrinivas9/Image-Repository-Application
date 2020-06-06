@@ -28,4 +28,4 @@ This is a Single Page Application that is created using MySQL, ExpressJS, Angula
 
 If you want to run the application without Docker
 1. Start the client using the command `browser-sync start --server --directory --files "**/*"`
-2. Start the server using npm start
+2. Start the server using `npm start`
