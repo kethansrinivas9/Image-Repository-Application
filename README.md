@@ -25,3 +25,7 @@ This is a Single Page Application that is created using MySQL, ExpressJS, Angula
    `Virtual Box -> Settings -> Network -> Adapter 1 -> Port Forwarding -> Add port forwarding rules for 3000 and 3002 ports`
 5. Run `docker-compose up` in the docker terminal to start the application
 6. Go to browser and open http://localhost:3000/main.html to access the application
+
+If you want to run the application without Docker
+1. Start the client using the command `browser-sync start --server --directory --files "**/*"`
+2. Start the server using npm start
